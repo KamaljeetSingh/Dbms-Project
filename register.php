@@ -15,7 +15,7 @@
 			$dobenter=$_POST['dobb'];
 			$found=0;
 			$f=0;
-			mysql_select_db('kamal_test');
+			mysql_select_db('project');
             $sql ="select * from voter_id"; 
             
             $retval = mysql_query( $sql, $conn );

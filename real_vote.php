@@ -13,7 +13,7 @@
 			$stat=0;
 			
 			
-			mysql_select_db('kamal_test');
+			mysql_select_db('project');
 			$sql="Select * from voter_list";
 			$retvalue = mysql_query( $sql, $conn );
 			while($row = mysql_fetch_assoc($retvalue))
@@ -51,7 +51,7 @@
 						<td width="500"><?php
 				  include 'mysql_conn.php';
 				  
-				  mysql_select_db('kamal_test');
+				  mysql_select_db('project');
 				  $sql="Select con_no from voter_id where '$id'=e_no";
 				  $retvalue = mysql_query( $sql, $conn );
 				  $row = mysql_fetch_assoc($retvalue);
@@ -80,7 +80,7 @@
 						<td width="500"><?php
 				  include 'mysql_conn.php';
 				  
-				  mysql_select_db('kamal_test');
+				  mysql_select_db('project');
 				  $sql="Select con_no from voter_id where '$id'=e_no";
 				  $retvalue = mysql_query( $sql, $conn );
 				  $row = mysql_fetch_assoc($retvalue);
@@ -106,7 +106,7 @@
 						<td width="500"><?php
 				  include 'mysql_conn.php';
 				  
-				  mysql_select_db('kamal_test');
+				  mysql_select_db('project');
 				  $sql="Select con_no from voter_id where '$id'=e_no";
 				  $retvalue = mysql_query( $sql, $conn );
 				  $row = mysql_fetch_assoc($retvalue);

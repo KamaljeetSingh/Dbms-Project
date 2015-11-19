@@ -8,7 +8,7 @@
             $sex = $_POST['sex'];
             
             $sql = "Select * from voter_id where e_no=$id and sex='$sex'" ;
-            mysql_select_db('kamal_test');
+            mysql_select_db('project');
             $retval = mysql_query( $sql, $conn );
             $found=0;
             if(! $retval )

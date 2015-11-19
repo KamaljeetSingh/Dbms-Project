@@ -1,9 +1,10 @@
+
 <?php
 
 include 'mysql_conn.php';
 
 $sql = 'Insert into voter_list values(101,7891,"Voted")';
-mysql_select_db('Kamal_test');
+mysql_select_db('project');
 $retval = mysql_query( $sql, $conn );
    
    if(! $retval )
