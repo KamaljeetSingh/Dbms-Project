@@ -2,6 +2,7 @@
 <body>
 
 <?php
+
 	if(isset($_POST['validate_id']))
          {
             include 'mysql_conn.php';
@@ -18,13 +19,13 @@
 			$retvalue = mysql_query( $sql, $conn );
 			while($row = mysql_fetch_assoc($retvalue))
 			{
-				if($row['Id']==$id)
+				if($row['e_no']==$id)
 					$found=1;
 				
-				if($row['OTP']==$pass) 
+				if($row['otp']==$pass) 
 					$pin=1;
 				
-				if($row['Status']=='NULL')
+				if($row['status']==0)
 					$stat=1;
 			}
 			
@@ -35,6 +36,9 @@
 			if($stat==0)
 				die("You Have Already Voted.");
 		 }
+?>
+<?php
+session_start();
 ?>
 <h2 style="background-color:Black;color:White;font-size:30;font-family:times new roman;text-align:right;"><b>Cast Your Vote!</b></h2>
 <p style="background-color:Yellow;font-size:30px;"><b>Click On The Cast Vote Of Your Desired Party To Cast Your Vote-</b></p>
@@ -59,10 +63,21 @@
 				  
 				  $qry="Select UPPER(name) from voter_id where e_no in (Select e_no from candidate where p_no='$i' and con_no=".$row['con_no'].")"; 
 					  $retval=mysql_query( $qry, $conn );
-					  $rowww = mysql_fetch_assoc($retval);
+					$rowww = mysql_fetch_assoc($retval);
 					  $candidate[0]=$rowww['UPPER(name)'];
 				  
 				   echo '<span style="padding-left:165px;font-family:Georgia;font-size:30px;color:RED;">'.$candidate[0].'</span>';
+				   
+				   $qry="Select con_no,cand_no from candidate where p_no='$i' and con_no=".$row['con_no'];	 
+				   $retval=mysql_query( $qry, $conn );
+					$rowww = mysql_fetch_assoc($retval);
+					
+					$_SESSION["consicong"] = $rowww['con_no'];
+                    $_SESSION["candicong"] = $rowww['cand_no'];
+					
+				   
+					
+				   
 				  ?>
 				  </td>
 				  <td>
@@ -91,6 +106,14 @@
 					  $candidate[1]=$rowww['UPPER(name)'];
 				  
 				   echo '<span style="padding-left:165px;font-family:Georgia;font-size:30px;color:RED;">'.$candidate[1].'</span>';
+				   
+				   $qry="Select con_no,cand_no from candidate where p_no='$i' and con_no=".$row['con_no'];	 
+				   $retval=mysql_query( $qry, $conn );
+					$rowww = mysql_fetch_assoc($retval);
+					
+					$_SESSION["consibjp"] = $rowww['con_no'];
+                    $_SESSION["candibjp"] = $rowww['cand_no'];
+				   
 				  ?>
 				  </td>
 				  <td>
@@ -118,6 +141,14 @@
 					  $candidate[2]=$rowww['UPPER(name)'];
 				  
 				   echo '<span style="padding-left:165px;font-family:Georgia;font-size:30px;color:RED;">'.$candidate[2].'</span>';
+				   
+				   $qry="Select con_no,cand_no from candidate where p_no='$i' and con_no=".$row['con_no'];	 
+				   $retval=mysql_query( $qry, $conn );
+					$rowww = mysql_fetch_assoc($retval);
+					
+					$_SESSION["consiaap"] = $rowww['con_no'];
+                    $_SESSION["candiaap"] = $rowww['cand_no'];
+				   
 				  ?>
 				  </td>
 				  <td>
