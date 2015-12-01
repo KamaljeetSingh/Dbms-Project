@@ -1,0 +1,59 @@
+<!Doctype html>
+
+<title>Candidate</title>
+<head>
+	<script>
+function redirect()
+{location="View_id.php";
+}
+</script>
+    <style type="text/css">
+    option.orange {background-color: #FF8C00;font-family:"Comic Sans MS", cursive, sans-serif;color:white;}
+	option.blue{background-color: #C71585;font-family:"Comic Sans MS", cursive, sans-serif;color:white;}
+	option.green{background-color: #006400;font-family:"Comic Sans MS", cursive, sans-serif;color:white;}
+	</style>
+</head>
+<body background = "Back/flag.jpg">
+<h3 style="font-size:300%;font-family:times new roman;text-align:center;"><font color="white"><b><u>View Candidate</u></b></font></h3>
+    <?php 
+	     $i=0;
+	?>
+	<form method="post" action="candidate.php">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p><b><u><span style="font-size:160%;padding-left:80px">Click Here To Select Constituency</span></u></b></p>
+	<select style="position:absolute;left:100px;font-size:120%;" name="const">
+        <option class="orange" value ="11">Laxmi Nagar</option>
+		<option class="blue" value ="13">Mayur Vihar</option>
+		<option class="green" value ="15">Malviya Nagar</option>
+		<option class="blue" value ="17">Hauz Khas</option>
+		<option class="orange" value ="19">Saket</option>
+	</select>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p><b><u><span style="font-size:160%;padding-left:80px">Click Here To Select Party</span></u></b></p>
+	<select style="position:absolute;left:100px;font-size:120%;" name="party">
+        <option class="orange" value ="101">Congress</option>
+		<option class="blue" value ="102">BJP</option>
+		<option class="green" value ="103">AAP</option>
+	</select>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<span style="padding-left:100px;"><input name="validate" type="submit" value="Submit"></span>
+	</form>
+	<br>
+	<form>
+        <span style="padding-left:100px"><input type="button" value="Main Menu" onclick="redirect();" ></span>
+      </form>
+	
+</body>
+</html>

@@ -1,20 +1,65 @@
 <!DOCTYPE html>
 <html>
+<head>
+<script>
+
+var currentTime = new Date();
+var month = currentTime.getMonth() + 1;
+var day = currentTime.getDate();
+var year = currentTime.getFullYear();
+//document.write(month + "/" + day + "/" + year);
+var currentTime = new Date();
+var hours = currentTime.getHours();
+var minutes = currentTime.getMinutes();
+if (minutes < 10){
+minutes = "0" + minutes;
+}
+//document.write(hours + ":" + minutes + " ");
+if(hours==23&&minutes==19)
+{
+document.write("Sorry Registeration Time Is Over Now.You Are Late");
+window.stop();
+}
+function redirect()
+{location="voting.html";
+}
+
+function valid()
+{
+var x=document.reg.voter_id.value;
+	var y=document.reg.dobb.value;
+	
+	var num=/^[0-9]+$/;
+	if(!x.match(num))
+	{
+		alert("Incorrect Voter-Id");
+		return false;
+	}
+	/*var dateformat = /^(0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])[\/\-]\d{4}$/;  
+	 if(!y.match(dateformat))
+	 {
+	 alert("Date Of Birth Entered In Wrong Format");
+	 return false;
+	 }*/
+}
+
+</script>
+</head>
 <title>New User</title>
 <body>
 <h2 style="background-color:Black;color:White;font-size:30;font-family:times new roman;text-align:left;"><b>Registration For Voting</b></h2>
-<body background="blue.jpg">
-<form action="register.php" method="post">
+<body background="back/blue.jpg">
+<form action="register.php" method="post" onsubmit="return valid()" name="reg">
 <table border="0" >
                   
                      <tr>
-                        <td width="200">Enter Your Voter_Id</td>
+                        <td width="200"><h4>Enter Your Voter_Id : </h4></td>
                         <td><input name="voter_id" type="text"></td>
                      </tr>
                    
 					
                      <tr>
-                        <td width="200">Enter Your Date Of Birth</td>
+                        <td width="200"><h4>Enter Your Date Of Birth(yyyy-mm-dd) : </h4></td>
                         <td><input name="dobb" type="password"></td>
                      </tr>
 					 
@@ -22,9 +67,33 @@
 					 <td width="200"></td>
 					 <td><input name="registers" type="submit" value="Register Yourself"></td>
 					 </tr>
-                   
+                 
 					
 </table>
+					<br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   <br>
+				   
+				   <input type="button" value="Go Back" onclick="redirect();">
 </form>
+					
+					
 </body>
 </html>

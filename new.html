@@ -1,0 +1,257 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	
+	
+	
+	
+	
+	
+	
+	<script>
+	
+	  
+  
+         
+//Twitter Widgets JS
+window.twttr = (function (d,s,id) {
+ var t, js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+}(document, "script", "twitter-wjs"));
+
+//Once twttr is ready, bind a callback function to the tweet event
+twttr.ready(function(twttr) {       
+    twttr.events.bind('tweet', function (event) {
+      alert("ss")
+    });
+});
+	
+	
+	
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</head>
+<body>
+	<div class="aamir">
+		<div class="slap"></div>
+		<img id="aamir-pic" src="kamaljeet.jpg" alt="Aamir" />
+		<!-- <img class="hand hand1" src="images/slap-hand-before.png" alt="" />
+		<img class="hand hand2" src="images/slap_hand_after.png" alt="" /> -->
+		<div class="hand"></div> 
+		<div style="display:none;">
+			<img id="aamir-pic" src="images/kamaljeet.jpg" alt="Aamir" />
+			<img id="aamir-pic" src="images/kamaljeet.jpg" alt="Aamir" />
+			<img id="aamir-pic" src="images/kamaljeet.jpg" alt="Aamir" />
+			<img id="aamir-pic" src="images/kamaljeet.jpg" alt="Aamir" />
+			<img id="aamir-pic" src="kamaljeet.jpg" alt="Aamir" />
+			<img id="aamir-pic" src="images/aamir6.png" alt="Aamir" />
+			<img id="aamir-pic" src="images/aamir7.png" alt="Aamir" />
+			<img id="aamir-pic" src="images/aamir8.png" alt="Aamir" />
+			<img id="aamir-pic" src="images/aamir9.png" alt="Aamir" />
+			<img id="aamir-pic" src="images/aamir10.png" alt="Aamir" />
+			<img id="aamir-pic" src="images/aamir11.png" alt="Aamir" /> 
+			<img id="aamir-pic" src="images/aamir12.png" alt="Aamir" /> 
+			<img id="aamir-pic" src="images/aamir13.png" alt="Aamir" /> 
+			<img id="aamir-pic" src="images/aamir14.png" alt="Aamir" /> 
+			<img id="aamir-pic" src="images/aamir15.png" alt="Aamir" /> 
+			<img id="aamir-pic" src="images/aamir16.png" alt="Aamir" /> 
+			<audio id="audio" src="images/audio2.aac" ></audio>
+			<audio id="audio" src="images/audio3.aac" ></audio>
+			<audio id="audio" src="images/audio4.aac" ></audio>
+			<audio id="audio" src="images/audio5.aac" ></audio>
+		</div>
+	</div>
+	<audio id="audio" src="images/audio2.aac" ></audio>
+	<div class="counter_slaps">
+		<div class="counter"><span>107653</span></div>
+		<p class="slaps_text">Kisses <br />More Love. Less Slaps.</p>
+	</div>
+	<div class="social_share">
+		<ul>
+			<li><a href="" id="fb-root"><img src="images/facebook.png" alt="facebook" /></a>
+				<script>
+					window.fbAsyncInit = function() {
+					FB.init({appId: '727773277366883', status: true, cookie: true,
+					xfbml: true});
+					};
+					(function() {
+					var e = document.createElement('script'); e.async = true;
+					e.src = document.location.protocol +
+					'//connect.facebook.net/en_US/all.js';
+					document.getElementById('fb-root').appendChild(e);
+					}());
+				</script>
+			</li>
+			<li>
+			<a href="http://kissaamir.com/" title="Dear tolerant citizen of India, thank you for kissing Aamir Khan. We will make sure that your love reaches him" class="tweet" target="_blank"><img src="images/twitter.png" alt="twitter" /></a> 
+
+			</li>   
+		</ul>
+		
+		<p>share to Spread Love</p>
+	</div>
+	
+	<div class="overlay">
+		<img src="images/cheque.png" alt="cheque" />
+	</div>
+	
+	<div class="footer">
+	kissaamir.com is for love and fun purposes only and represents kindness and kisses only. please spread the tolerance of our love only.
+	</div>
+	
+	<script type="text/javascript">
+
+
+  
+		$('a.tweet').click(function(e){
+		  //We tell our browser not to follow that link
+		  e.preventDefault();
+		  //We get the URL of the link
+		  var loc = $(this).attr('href');
+		  //We get the title of the link
+		  var title  = encodeURIComponent($(this).attr('title'));
+		  //We trigger a new window with the Twitter dialog, in the middle of the page
+		  window.open('http://twitter.com/share?url=' + loc + '&text=' + title + '&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+			
+			
+		});
+
+		function showCheque(){
+			$('.overlay').fadeIn(500);
+		}
+		
+		$(function(){
+			$('.overlay').click(function(){
+				$(this).fadeOut(500);
+			});
+		});
+	
+	
+		//fb share
+		$(document).ready(function(){
+			$('#fb-root').click(function(e){
+			e.preventDefault();
+			FB.ui({
+				method: 'feed',
+				name: ' kissaamir.com - Spread Love, Not Intolerance',
+				link: ' http://kissaamir.com/', 
+				picture: 'http://kissaamir.com/images/fb_share.jpg',  
+				//caption: 'This is the content of the "caption" field.', 
+				description: 'Dear tolerant citizen of India, thank you for kissing Aamir Khan. We will make sure that your love reaches him',
+				//message: 'message'
+				} /* , function(response) {
+					  if (response && response.post_id) {
+						//alert('Post was published.');
+						showCheque();
+					  } else {
+						alert('Post was not published.');
+					  }
+					}
+					*/
+				);
+				
+			}); 
+			
+			
+			
+			
+		});
+
+	
+	
+	
+	
+	  function splitchar()
+          {
+            $('.counter').each(function (index) {
+                var characters = $(this).text().split("");
+				
+                $this = $(this);
+                $this.empty();
+                $.each(characters, function (i, el) {
+                $this.append("<span>" + el + "</span");
+                });
+
+            });
+          }
+		function random1() {
+			return Math.floor(Math.random() * (15 - 1 + 1)) + 1;
+		}
+		function randomAudio() {
+			return Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+		}
+		
+		var $hand = $('.hand');   
+		  $('.aamir').bind('mousemove',function(e){
+			$hand.css({ left: e.pageX -200,top:  e.pageY -60});
+		  })
+		  
+		  $('.aamir').on( "mouseenter", function() {
+			$hand.show();
+		  });
+		  $('.aamir').on( "mouseleave", function() {
+			$hand.hide();
+		  });
+		  
+		  
+		function play(){
+			/*
+			return Math.floor(Math.random() * (5 - 1 + 1)) + 1;	
+			var audioPlay = 'images/audio'+random+'.aac';
+			audio.attr().attr('src', audioPlay);
+			*/
+			var audio = document.getElementById("audio");
+			audio.play();
+        }
+		
+		
+	
+		var i = 0; 
+		$("div.slap").mouseover(function() {
+			i += 1;
+                        
+                         $.ajax({url: "setcount.php", success: function(result){
+                                 
+                                 $(".counter").text(result);
+                                 splitchar();
+                            }});
+			//$(".counter").text(i);   
+			$('.hand').addClass('hand-splashed');
+			splitchar();
+			var random = random1();
+			var name = 'images/aamir'+random+'.png';
+			$('#aamir-pic').attr('src', name);
+			
+			//var random2 = randomAudio();
+			//var name2 = 'images/audio'+random2+'.aac';
+			//$('#audio').attr('src', name2); 
+			//alert(random);
+			play();
+		})
+		.mouseout(function() {
+			$('.hand').removeClass('hand-splashed');
+		});
+		
+		
+		
+		splitchar();
+		
+		
+	</script>
+</body>
+</html>

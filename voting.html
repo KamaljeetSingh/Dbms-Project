@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
+<head>
+<script>
+function validateForm()
+{
+	var x=document.myform.voter_id.value;
+	var y=document.myform.OTP.value;
+	
+	var num=/^[0-9]+$/;
+	if(!x.match(num))
+	{
+		alert("Incorrect Voter-Id");
+		return false;
+	}
+	if(y.length==0)
+	{
+	alert("Please Enter Your Password");
+	return false;
+	}
+	 if(!y.match(num))
+	 {
+	 alert("OTP must contains only numbers");
+	 return false;
+	 }
+}
+</script>
 <body>
 
 <h3 style="background-color:GREEn;color:Yellow;font-size:300%;font-family:times new roman;text-align:center;"><b>Every Vote Counts</b></h3>
-<body background="Presentation1.jpg">
+<body background="back/Presentation1.jpg">
 
-<form action="real_vote.php" method="post">
+<form action="real_vote.php" method="post" onsubmit="return validateForm()" name="myform">
 <table border="10"  cellspacing="20">
-                     <p><b><span style="padding-left:20px">Existing User Login Here To Vote</span> </b></p>
+                     <p><b><span style="padding-left:20px"><h3>Existing User Login Here To Vote</h3></span> </b></p>
                      <tr>
                         <td width="100">Voter_Id</td>
                         <td><input name="voter_id" type="text"></td>
@@ -30,7 +55,7 @@
 
 		
 			<td width="500"></td>
-					 <td><a href="register_user.html"><h3 style="font-size:30;">Register Here For New User!</h3></a>
+					 <td><a href="register_user.html"><h2 style="font-size:30;">Register Here For New User!</h2></a>
 					 </td>
 					 </tr>
 </table>

@@ -4,12 +4,17 @@
 
 <title>View</title>
 <head>
+<script>
+function redirect()
+{location="main.html";
+}
+</script>
 <meta charset="utf-8">
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
-<body background="blue.jpg">
+<body background="back/blue.jpg">
 <div class="d">
-<h3 style="font-size:300%;font-family:times new roman;text-align:center;"><font color="white"><b><u>View Details</u></b></font></h3>
+<h3 style="font-size:300%;font-family:times new roman;text-align:center;"><font color="yellow"><b><u>View Details</u></b></font></h3>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 	<br>
 	<br>
@@ -58,10 +63,10 @@
 					 ?>
 					 <script>
 					$( ".d" ).remove();
-					 document.body.style.background = "url('back.jpg') no-repeat right top";
+					 document.body.style.background = "url('back/back.jpg') no-repeat right top";
 					</script>	
 					 
-					 <h3 style="font-size:300%;font-family:times new roman;text-align:center;"><font color="white"><b><u>Voter Id Card</u></b></font></h3>
+					 <h3 style="font-size:300%;font-family:times new roman;text-align:center;"><font color="yellow"><b><u>Voter Id Card</u></b></font></h3>
 				     
 					 <br>
 				     <br>
@@ -71,46 +76,46 @@
 					 <img style="position:absolute; TOP:250px; LEFT:900px;"  src="<?php echo $row["addr"];"" ?>"alt "" align="right"  height="326" width="216">
 	                 <table border='0' cellpadding="10"	 >	
 					     <tr>
-		                     <td ><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:white">Voter</span></td>
-		                     <td ><span style="font-family:Georgia;font-size:20px;color:white">Number</span></td>						 
-						     <td ><span style="font-family:Georgia;font-size:20px;color:white">:</span></td>							 
-						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:white;">'.$row['e_no'].'</span>';?></td>
+		                     <td ><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:yellow">Voter</span></td>
+		                     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">Number</span></td>						 
+						     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">:</span></td>							 
+						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:yellow;">'.$row['e_no'].'</span>';?></td>
 						</tr>
 					     <tr>
-					         <td><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:white">Voter</span></td>
-		                     <td ><span style="font-family:Georgia;font-size:20px;color:white">Name</span></td>						 
-						     <td ><span style="font-family:Georgia;font-size:20px;color:white">:</span></td>						 
-						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:white;">'.strtoupper($row['name']).'</span>';?></td>
+					         <td><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:yellow">Voter</span></td>
+		                     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">Name</span></td>						 
+						     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">:</span></td>						 
+						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:yellow;">'.strtoupper($row['name']).'</span>';?></td>
 					    </tr>
 				     	 <tr>
-					         <td><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:white">Voter</span></td>
-		                     <td ><span style="font-family:Georgia;font-size:20px;color:white">Sex</span></td>						 
-						     <td ><span style="font-family:Georgia;font-size:20px;color:white">:</span></td>						 
-						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:white;">'.strtoupper($row['sex']).'</span>';?></td>
+					         <td><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:yellow">Voter</span></td>
+		                     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">Sex</span></td>						 
+						     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">:</span></td>						 
+						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:yellow;">'.strtoupper($row['sex']).'</span>';?></td>
 					    </tr>
 				     	 <tr>
-					         <td><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:white">Voter</span></td>
-		                     <td ><span style="font-family:Georgia;font-size:20px;color:white">DOB</span></td>						 
-						     <td ><span style="font-family:Georgia;font-size:20px;color:white">:</span></td>						 
-						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:white;">'.strtoupper($row['dob']).'</span>';?></td>
+					         <td><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:yellow">Voter</span></td>
+		                     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">DOB</span></td>						 
+						     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">:</span></td>						 
+						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:yellow;">'.strtoupper($row['dob']).'</span>';?></td>
 					     </tr>
 		    			 <tr>
-			    		     <td><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:white">Voter</span></td>
-		                     <td ><span style="font-family:Georgia;font-size:20px;color:white">Address</span></td>						 
-						     <td ><span style="font-family:Georgia;font-size:20px;color:white">:</span></td>						 
-						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:white;">'.strtoupper($row['address']).'</span>';?></td>
+			    		     <td><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:yellow">Voter</span></td>
+		                     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">Address</span></td>						 
+						     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">:</span></td>						 
+						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:yellow;">'.strtoupper($row['address']).'</span>';?></td>
 		     			 </tr>
 			 		     <tr>
-					         <td><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:white">Voter</span></td>
-		                     <td ><span style="font-family:Georgia;font-size:20px;color:white">Constituency</span></td>						 
-						     <td ><span style="font-family:Georgia;font-size:20px;color:white">:</span></td>						 
-						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:white;">'.strtoupper($row['con_name']).'</span>';?></td>
+					         <td><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:yellow">Voter</span></td>
+		                     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">Constituency</span></td>						 
+						     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">:</span></td>						 
+						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:yellow;">'.strtoupper($row['con_name']).'</span>';?></td>
 					     </tr>
 					     <tr>
-					         <td><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:white">Voter</span></td>
-		                     <td ><span style="font-family:Georgia;font-size:20px;color:white">State</span></td>						 
-						     <td ><span style="font-family:Georgia;font-size:20px;color:white">:</span></td>						 
-						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:white;">'.strtoupper($row['s_name']).'</span>';?></td>
+					         <td><span style="padding-left:225px;font-family:Georgia;font-size:20px;color:yellow">Voter</span></td>
+		                     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">State</span></td>						 
+						     <td ><span style="font-family:Georgia;font-size:20px;color:yellow">:</span></td>						 
+						     <td width="350"><?php echo '<span style="font-family:Georgia;font-size:20px;color:yellow;">'.strtoupper($row['s_name']).'</span>';?></td>
 					     </tr>
 				    </table>
 				     <br>
@@ -122,8 +127,8 @@
 					 ?>
 					 <a href="main.html"><u><span style="position:absolute; LEFT:400px;color:red;font-size:130%">Log Out</span></u></a>
 				     
-					        }							
-				        }
+					        							
+				        
 				    </script>	
                 	 </body>
 					 <?php
@@ -156,5 +161,11 @@
 		 }
 	 }
 ?>
+<br>
+<br>
+
+<form>
+        <input type="button" value="◄ Home Page" onclick="redirect();" >
+      </form>
 </body>
 </html>	 

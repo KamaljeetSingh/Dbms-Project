@@ -1,0 +1,71 @@
+<!Doctype HTML>
+
+
+<title>Candidate</title>
+<head>
+	<script>
+var currentTime = new Date();
+var month = currentTime.getMonth() + 1;
+var day = currentTime.getDate();
+var year = currentTime.getFullYear();
+//document.write(month + "/" + day + "/" + year);
+var currentTime = new Date();
+var hours = currentTime.getHours();
+var minutes = currentTime.getMinutes();
+if (minutes < 10){
+minutes = "0" + minutes;
+}
+//document.write(hours + ":" + minutes + " ");
+if(hours==23&&minutes==18)
+{
+document.write("Sorry Results Are Not Aired Yet.Voting Still Going On");
+window.stop();
+}
+function redirect()
+{location="main.html";
+}
+</script>
+    <style type="text/css">
+    option.orange {background-color: #FF8C00;font-family:"Comic Sans MS", cursive, sans-serif;color:white;}
+	option.blue{background-color: #C71585;font-family:"Comic Sans MS", cursive, sans-serif;color:white;}
+	option.green{background-color: #006400;font-family:"Comic Sans MS", cursive, sans-serif;color:white;}
+	</style>
+</head>
+<body background = "Back/orange.jpg">
+<h1 style="font-size:500%;font-family:Garamond;text-align:center;"><font color="white"><b>View Result</b></font></h1>
+    <?php 
+	     $i=0;
+	?>
+	<form method="post" action="result_see.php">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p><b><u><span style="font-size:160%;padding-left:530px">Click Here To Select Constituency</span></u></b></p>
+	<select style="left:750px;font-size:120%;" name="const">
+        <option class="orange" value ="11">Laxmi Nagar</option>
+		<option class="blue" value ="13">Mayur Vihar</option>
+		<option class="green" value ="15">Malviya Nagar</option>
+		<option class="blue" value ="17">Hauz Khas</option>
+		<option class="orange" value ="19">Saket</option>
+	</select>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<span style="padding-left:720px;"><input name="validate" type="submit" value="See Result"></span>
+	</form>
+	<br>
+	<form>
+        <span style="padding-left:720px"><input type="button" value="Home Page" onclick="redirect();" ></span>
+      </form>
+	
+</body>
+</html>

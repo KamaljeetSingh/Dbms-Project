@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2015 at 12:34 PM
+-- Generation Time: Nov 29, 2015 at 06:34 AM
 -- Server version: 10.1.8-MariaDB
 -- PHP Version: 5.6.14
 
@@ -44,7 +44,7 @@ INSERT INTO `candidate` (`cand_no`, `cand_details`, `p_no`, `con_no`, `cand_eno`
 (203, 'ex-IPS', 101, 17, 1006),
 (204, 'ex-cm', 103, 11, 1008),
 (205, 'ex-dm', 101, 13, 1007),
-(206, 'ex-cm', 102, 11, 1015),
+(206, 'ex-cm', 102, 11, 1005),
 (207, 'ex-IAS', 101, 15, 1010),
 (208, 'ex-IPS', 103, 17, 1014),
 (209, 'ex-cm', 101, 19, 1026),
@@ -121,7 +121,67 @@ CREATE TABLE `photo` (
 --
 
 INSERT INTO `photo` (`e_no`, `addr`) VALUES
-(1005, 'Images/rishabh.jpg');
+(1001, 'images/garvit.jpg'),
+(1002, 'Images/Shubhra.jpg'),
+(1003, 'Images/Apoorva.jpg'),
+(1004, 'images/Sanya.jpg'),
+(1005, 'Images/rishabh.jpg'),
+(1006, 'images/kamaljeet.jpg'),
+(1007, 'images/sanyam.jpg'),
+(1008, 'images/manobhav.jpg'),
+(1009, 'images/shubham.jpg'),
+(1010, 'images/sanjay.jpg'),
+(1011, 'images/vivek.jpg'),
+(1012, 'images/vaibhav.jpg'),
+(1013, 'images/gaurav.jpg'),
+(1014, 'images/aarnav.jpg'),
+(1015, 'images/amar.jpg'),
+(1016, 'images/aman.jpg'),
+(1017, 'images/sujnesh.jpg'),
+(1018, 'images/geetansh.jpg'),
+(1019, 'images/priyanshu.jpg'),
+(1020, 'images/aditya.jpg'),
+(1021, 'images/pranjal.jpg'),
+(1022, 'images/rastogi.jpg'),
+(1023, 'images/deepali.jpg'),
+(1024, 'images/mayank.jpg'),
+(1025, 'images/shubhi.jpg'),
+(1026, 'images/yogita.jpg'),
+(1027, 'images/megha.jpg'),
+(1028, 'images/nirupam.jpg'),
+(1029, 'images/harshit.jpg'),
+(1030, 'images/shivam.jpg'),
+(1031, 'images/animesh.jpg'),
+(1032, 'images/priyansh.jpg'),
+(1033, 'images/avruty.jpg'),
+(1034, 'images/somya.jpg'),
+(1035, 'images/ananya.jpg'),
+(1036, 'images/sonali.jpg'),
+(1037, 'images/siddant.jpg'),
+(1038, 'images/siddarth.jpg'),
+(1039, 'images/rahul.jpg'),
+(1040, 'images/arun.jpg'),
+(1041, 'images/gaurang.jpg'),
+(1042, 'images/vikash.jpg'),
+(1043, 'images/pankaj.jpg'),
+(1044, 'images/prashant.jpg'),
+(1045, 'images/ekansh.jpg'),
+(1046, 'images/udit.jpg'),
+(1047, 'images/shashank.jpg'),
+(1048, 'images/palak.jpg'),
+(1049, 'images/parv.jpg'),
+(1050, 'images/harsh.jpg'),
+(1051, 'images/pratigya.jpg'),
+(1052, 'images/utkarsh.jpg'),
+(1053, 'images/saumitra.jpg'),
+(1054, 'images/nidhi.jpg'),
+(1055, 'images/chanchur.jpg'),
+(1056, 'images/simar.jpg'),
+(1057, 'images/naman.jpg'),
+(1058, 'images/manish.jpg'),
+(1059, 'images/prasoon.jpg'),
+(1060, 'images/arjun.jpg'),
+(1061, 'images/nirupam.jpg');
 
 -- --------------------------------------------------------
 
@@ -132,7 +192,7 @@ INSERT INTO `photo` (`e_no`, `addr`) VALUES
 CREATE TABLE `result` (
   `no_of_votes` int(20) DEFAULT NULL,
   `con_no` int(50) DEFAULT NULL,
-  `can_no` int(20) NOT NULL
+  `can_no` int(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -177,14 +237,14 @@ CREATE TABLE `voter_id` (
 
 INSERT INTO `voter_id` (`e_no`, `name`, `sex`, `dob`, `address`, `con_no`) VALUES
 (1001, 'garvit', 'm', '1995-01-01', 'a1', 11),
-(1002, 'shubhra', 'f', '1995-01-02', 'a2', 15),
-(1003, 'apporva', 'f', '1995-01-03', 'a3', 13),
-(1004, 'sanya', 'f', '1995-01-04', 'a4', 17),
-(1005, 'rishab', 'm', '1995-01-05', 'a5', 19),
-(1006, 'kamaljeet', 'm', '1995-01-06', 'a6', 18),
+(1002, 'shubhra', 'f', '1995-08-01', 'a2', 15),
+(1003, 'apporva', 'f', '1995-07-15', 'a3', 13),
+(1004, 'sanya', 'f', '1996-09-26', 'a4', 17),
+(1005, 'rishabh', 'm', '1996-11-04', 'a5', 19),
+(1006, 'kamaljeet', 'm', '1996-11-15', 'a6', 18),
 (1007, 'sanyam', 'm', '1995-01-07', 'a7', 11),
 (1008, 'manobhav', 'm', '1995-01-08', 'a8', 17),
-(1009, 'shubham', 'm', '1995-01-09', 'a9', 13),
+(1009, 'shubham', 'm', '1995-07-24', 'a9', 13),
 (1010, 'sanjay', 'm', '1995-01-10', 'a10', 19),
 (1011, 'vivek', 'm', '1995-01-11', 'a11', 15),
 (1012, 'vaibhav', 'm', '1995-01-12', 'a12', 14),
@@ -235,7 +295,8 @@ INSERT INTO `voter_id` (`e_no`, `name`, `sex`, `dob`, `address`, `con_no`) VALUE
 (1057, 'naman', 'm', '1995-02-26', 'a57', 17),
 (1058, 'manish', 'm', '1995-02-27', 'a58', 19),
 (1059, 'prasoon', 'm', '1995-02-28', 'a59', 11),
-(1060, 'arjun', 'm', '0000-00-00', 'a60', 13);
+(1060, 'arjun', 'm', '0000-00-00', 'a60', 13),
+(1061, 'Nirupam', 'F', '1996-08-20', 'Ghar pe :P', 18);
 
 -- --------------------------------------------------------
 
@@ -248,13 +309,6 @@ CREATE TABLE `voter_list` (
   `otp` int(20) DEFAULT NULL,
   `status` int(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `voter_list`
---
-
-INSERT INTO `voter_list` (`e_no`, `otp`, `status`) VALUES
-(1005, 7870, 0);
 
 --
 -- Indexes for dumped tables
@@ -292,8 +346,8 @@ ALTER TABLE `photo`
 -- Indexes for table `result`
 --
 ALTER TABLE `result`
-  ADD PRIMARY KEY (`can_no`),
-  ADD KEY `con_no` (`con_no`);
+  ADD KEY `con_no` (`con_no`),
+  ADD KEY `can_no` (`can_no`);
 
 --
 -- Indexes for table `state`
