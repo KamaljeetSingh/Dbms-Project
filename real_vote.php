@@ -50,11 +50,38 @@ window.stop();
 			}
 			
 			if($found==0)
-				die("You have Not Registered");
+			{
+				session_start();
+				 unset($_SESSION['root']);
+				session_destroy();
+				?>
+				<h1>You Have Not Registered</h1>
+             	<a href="main.html"><span style="color:red;font-size:130%"><b>Back</b></span></a>
+				<?php
+				die();
+			}
 			if($pin==0)
-				die("Make Sure You Have Entered Correct Password");
+			{
+				session_start();
+				 unset($_SESSION['root']);
+				session_destroy();
+				?>
+				<h1>Make Sure You Have Entered Correct Password</h1>
+             	<a href="main.html"><span style="color:red;font-size:130%"><b>Back</b></span></a>
+				<?php
+				die();
+			}
 			if($stat==0)
-				die("You Have Already Voted. Sorry You Cant Vote More Than Once");
+			{
+				session_start();
+				 unset($_SESSION['root']);
+				session_destroy();
+				?>
+				<h1>You Have Already Voted. Sorry You Cant Vote More Than Once</h1>
+             	<a href="main.html"><span style="color:red;font-size:130%"><b>Back</b></span></a>
+				<?php
+				die();
+			}
 		 }
 		// echo $found,$pin,$stat;
 ?>

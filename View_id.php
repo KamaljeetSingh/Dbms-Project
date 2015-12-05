@@ -4,11 +4,6 @@
 
 <title>View</title>
 <head>
-<script>
-function redirect()
-{location="main.html";
-}
-</script>
 <meta charset="utf-8">
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
@@ -37,6 +32,10 @@ function redirect()
 	</form>
 	    <td><a href="Candidate.html"><h3 style="font-size:160%;font-family:times new roman;padding-left:400px;">Click Here to View Candidate Details</h3></a></td>
 	</tr>
+	<tr>
+        <td><a href="main.html"><h2 style="font-size:30;">Back</h2></a>
+	 	</td> 
+	</tr>				
 	</table>
 	</div>
 <?php
@@ -125,11 +124,7 @@ function redirect()
 							        //header("Location: frst.html");
 							        //exit();
 					 ?>
-					 <a href="main.html"><u><span style="position:absolute; LEFT:400px;color:red;font-size:130%">Log Out</span></u></a>
-				     
-					        							
-				        
-				    </script>	
+					 <a href="main.html"><u><span style="position:absolute; LEFT:400px;color:red;font-size:130%">Log Out</span></u></a>	
                 	 </body>
 					 <?php
 				 }
@@ -161,11 +156,5 @@ function redirect()
 		 }
 	 }
 ?>
-<br>
-<br>
-
-<form>
-        <input type="button" value="◄ Home Page" onclick="redirect();" >
-      </form>
 </body>
 </html>	 

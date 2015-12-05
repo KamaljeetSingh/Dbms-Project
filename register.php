@@ -42,16 +42,27 @@ function redirect()
 			if ($found==0)
 			{
 				echo '<span style="padding-left:550px;font-family:Georgia;font-size:30px;color:RED;">The Details Entered Do Not Exist</span>';
-				die();
-				 mysql_close($conn);
+?>
+     <input type="button" value="Main Menu" onclick="redirect();" >
+    <?php
+
+		session_start();
+							        unset($_SESSION['root']);
+										session_destroy();
+	die();				
 			}
 			
 			if($f==0)
 			{echo '<span style="padding-left:80px;font-family:Georgia;font-size:30px;color:RED;">Either The Constituency Does Not Exist Or You Are Not Eligible To Vote From This Constituency</span>';
-				die();
-				
-				 mysql_close($conn);
-			}
+?>
+     <input type="button" value="Main Menu" onclick="redirect();" >
+    <?php
+
+		session_start();
+							        unset($_SESSION['root']);
+										session_destroy();
+	die();				
+				}
 			
 			
 			
@@ -69,7 +80,14 @@ function redirect()
 				
 				if ($found==1)
 				{echo '<span style="padding-left:550px;font-family:Georgia;font-size:30px;color:RED;">You Have Already Registered</span>';
-				die();
+?>
+     <input type="button" value="Main Menu" onclick="redirect();" >
+    <?php
+
+			session_start();
+							        unset($_SESSION['root']);
+										session_destroy();
+			die();
 				}
 				else
 				{
@@ -156,7 +174,12 @@ function redirect()
 			$retvalue = mysql_query( $sql );
 			$row = mysql_fetch_assoc($retvalue);
 			echo '<span style="padding-left:1100px;font-family:Georgia;font-size:20px;color:Brown;">'.$row['count(*)']." Persons Have Registred ".'</span>';
+			session_start();
+							        unset($_SESSION['root']);
+										session_destroy();
+
 			?>
+			
 			</td>
 			</tr>
 </table>
